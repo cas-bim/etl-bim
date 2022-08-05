@@ -107,7 +107,8 @@
                 <p>Le logiciel ETL utilisé pour ce cours est <a href="https://www.safe.com/fme/fme-desktop/">FME<span
                       style="color: #404040;"></span></a>, un logiciel largement
                   utilisé dans le domaine des SIG pour le transfert et la
-                  manipulation des données spatial ou standard.<span id="p41"><br>
+                  manipulation des données spatiales (ou&nbsp; non-spatiales).<span
+                    id="p41"><br>
                   </span></p>
                 <p><span>Monter en compétences dans l'utilisation d'un nouveau
                     logiciel n'est pas une chose aisée, surtout en une seule
@@ -120,11 +121,10 @@
                     de sensibiliser les participants à ces problématiques et
                     solutions techniques.</span><span id="p44"><br>
                   </span></p>
-                <p><span></span><span>La première partie du cours abordera
-                    l'utilisation de ce logiciel par le bais d'exemple et
-                    d'exercices.</span><span id="p4"> Puis, nous aborderons dans
-                    la seconde partie le transfert et la manipulation des
-                    données <span id="12">BIM</span>.</span></p>
+                <p><span>La première partie du cours abordera l'utilisation de
+                    ce logiciel par le bais d'exemple et d'exercices.</span><span
+                    id="p4"> Puis, nous aborderons dans la seconde partie le
+                    transfert et la manipulation des données <span id="12">BIM</span>.</span></p>
                 <p><br>
                 </p>
                 <h2 id="materiel-du-cours">Matériel du cours</h2>
@@ -153,12 +153,11 @@
                 <p>FME est l'outil incontournable pour l'échange, la
                   transformation, le chargement et le contrôle des données
                   spatiales vectorielles ou raster.<img src="https://cdn.safe.com/wp-content/uploads/2015/05/13111320/fmediagram_backup.png"
-                    alt="fme" title="fme" longdesc="https://cdn.safe.com/wp-content/uploads/2015/05/13111320/fmediagram_backup.png">
-                </p>
-                Capable de lire et d’écrire plusieurs <a href="https://www.safe.com/fme/formats-matrix">centaines
-                  de formats différents</a> (vectoriels, raster et
-                non-spatiaux), FME s'impose comme un standard incontournable
-                dans la manipulation de géo-données.
+                    alt="fme" title="fme" longdesc="https://cdn.safe.com/wp-content/uploads/2015/05/13111320/fmediagram_backup.png">Capable
+                  de lire et d’écrire plusieurs <a href="https://www.safe.com/fme/formats-matrix">centaines
+                    de formats différents</a> (vectoriels, raster et
+                  non-spatiaux), FME s'impose comme un standard incontournable
+                  dans la manipulation de géo-données. </p>
                 <p>Grâce à une interface graphique intuitive (Workbench), vous
                   pouvez concevoir vos processus de traitement de données sans
                   une seule ligne de code.</p>
@@ -169,12 +168,43 @@
                 </p>
                 <p><br>
                 </p>
+                <h3>Présentation des éléments clés de FME </h3>
+              </div>
+              <div class="section"><br>
+              </div>
+              <div class="section">
+                <p><b>FME-Workbench</b> : l’atelier de conception FME-Workbench
+                  est la pièce centrale de FME : le studio de conception des
+                  traitements. FME-Workbench fournit un environnement totalement
+                  graphique pour concevoir tous types de traitements, des plus
+                  simples aux plus complexes.<br>
+                  Dans FME-Workbench, les traitements sont composés de quatre
+                  composants graphiques :</p>
+                <ul>
+                  <li>les types d’entités des jeux de données source</li>
+                  <li>les types d’entités des jeux de données destination</li>
+                  <li>des transformers, unités de traitement,</li>
+                  <li>des flux de données qui relient les types d’entités
+                    source, les transformers et les types d’entités destination</li>
+                </ul>
+                <img src="file:/img/fme_basis.png" alt=" "><img src="img/fme_basis.png"
+                  alt=" ">
+                <p style="text-align: right;"><i>source (texte + image) : <a href="https://www.veremes.com/wp-content/uploads/Livre_blanc_etl_spatial.pdf">Veremes
+                      </a></i><br> </p>
+                <p>Le <b>workspace</b> FME est le code (graphique) qui permet
+                  d'effectuer une transformation.&nbsp; Ce code est interprété,
+                  puis executé par le <b>FME-Workbench. </b>Le&nbsp; <b>workspace
+                    </b>est un simple fichier texte qui peut être transmis à
+                  tout autre utilisateur qui dispose de FME pour l'executer.
+                  Dans la suite de ce cours, certains exercices débuteront avec
+                  un workspace FME déjà créé, d'autres avec un workspace
+                  totalement vide. </p>
+              </div>
+              <div class="section">
                 <h2 id="fme">Installation </h2>
                 <p>Les postes que vous utilisés ont déjà FME installés. Il faut
                   cepndant quand-même se connecter un serveur de license de la
                   façons suivante : </p>
-                <p><br>
-                </p>
                 <ol>
                 </ol>
                 1. Ouvrir le&nbsp;<em>FME Licensing Assistant&nbsp;</em>(si pas
