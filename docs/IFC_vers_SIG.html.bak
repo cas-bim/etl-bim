@@ -155,32 +155,28 @@
                 <img src="img/bim2gis_3.png" alt=" " title=" "></div>
               <div class="section">
                 <p>Nous devons effectuer cette translation car l'extracteur du
-                  SITG nous transmet la donnée avec décalage par défaut. Ceci
-                  afin de limiter la longueur des coordonnées. </p>
+                  SITG nous transmet la données avec décalage par défaut. Ceci
+                  afin de limiter la longeur des coordonnées. </p>
                 <p>Une fois cette translation effectuée, nous allons texturer
-                  les toitures à l'aide de l'orthophoto. Pour ce faire, nous
+                  les toitures à l'aide de l'othophoto. Pour ce faire, nous
                   allons utiliser un "AppearanceSetter". </p>
                 <img src="img/bim2gis_4.png" alt=" " title=" ">
                 <p><br>
                 </p>
-                <p><span id="p57"><span id="60">Il nous</span> maintenant
-                    changer de système de coordonnées pour utiliser le système
-                    mondial Webmercator.</span><span id="p58"><span id="66" class="s-bl">
-                      Pour</span> ce faire, nous allons utiliser un "<span id="63"
-                      class="s-rg">CsmapReprojector</span>" avec l'option "<span
-                      id="64" class="s-rg">EPSG</span><span id="67" class="s-bl">:</span></span><span
-                    id="p59"><span id="68">3857</span>".</span></p>
-                <p></p>
+                <p>Il nous maintenant changer de système de coordonnée pour
+                  utiliser les système mondial Webmercator.&nbsp; Pour ce faire,
+                  nous allons utiliser un "CsmapReprojector" avec l'option
+                  "EPSG:3857".</p>
                 <img src="img/bim2gis_5.png" alt=" " title=" ">
                 <p>Puis, nous devons plaquer notre donnée sur le sol (donc
-                  réduire l'altitude suisse). Cesium Ion s'occupera de la placer
+                  réduire l'altitude Suisse). Cesium Ion s'occupera de la placer
                   sur son terrain. </p>
                 <img src="img/bim2gis_6.png" alt=" " title=" ">
                 <p>422 mètres étant l'altitude minimale de notre donnée. </p>
                 <p>Puis nous pouvons ajouter un "FeatureWriter". </p>
                 <img src="img/bim2gis_7.png" alt=" " title=" ">
-                <p><span id="p89">&nbsp;Lancer la transformation et constater
-                    qu'un fichier zip a été créé à l'endroit spécifié.</span></p>
+                <p>&nbsp;Lancer la transformation et constater qu'un fichier zip
+                  a été créé à l'androit spécifié. </p>
                 <p>Le workspace doit ressembler à cela : </p>
                 <img src="img/bim2gis_8.png" alt=" " title=" ">
                 <p><br>
@@ -199,7 +195,7 @@
               <div class="section"><br>
               </div>
               <div class="section">Puis sélectionner le fichier zip créé lors de
-                l'étape <span id="p120">précédente</span></div>
+                l'étape précédante</div>
               <div class="section"><br>
               </div>
               <img src="img/bim2gis_11.png" alt=" "></div>
@@ -225,8 +221,7 @@
                 <p><span style="font-family: &quot;Roboto Slab&quot;,&quot;ff-tisa-web-pro&quot;,&quot;Georgia&quot;,Arial,sans-serif;">Pour
                     ce faire, nous pouvons simplement copier - coller le
                     "Deaggregator" et le "Offsetter" que nous avons mis en place
-                    lors de l'étape </span><span style="font-family: &quot;Roboto Slab&quot;,&quot;ff-tisa-web-pro&quot;,&quot;Georgia&quot;,Arial,sans-serif;"><span
-                      id="p109">précédente</span>. <br>
+                    lors de l'étape précédédente. <br>
                   </span></p>
                 <img src="file:///C:/Users/longcham/Dropbox/formation/etl-bim/docs/img/bim2gis_13.png"
                   alt=" ">
@@ -241,23 +236,19 @@
               </div>
               <div class="section"><img src="img/bim2gis_14.png" alt=" ">
                 <p>les mûrs sont maintenant connectés au Writer, vous pouvez
-                  relancer la <span id="p127">transformation </span>complète
-                  et charger le fichier zip sur Cesium Ion à nouveau </p>
+                  relancer la tranformation complète et charger le fichier zip
+                  sur Cesium Ion à nouveau </p>
                 <img src="img/bim2gis_15.png" alt=" "></div>
               <div class="section">
                 <h2><br>
                 </h2>
                 <h3>Ajout des arbres</h3>
-                <p><span id="p130">L<span id="146">e standard IFC 4</span>.</span><span
-                    id="p131"><span id="147" class="s-rg">x</span> ne possède
-                    pas de classes pour les arbres, cette information se trouve
-                    dans la classe générique "<span id="148" class="s-rg">IfcGeographicElement</span>",
-                    <span id="149" class="s-rg">parmis</span> plein d'autres
-                    éléments <span id="p129">(les bien-fonds, les données <span
-                        id="143" class="s-rg">RDPPF</span>, <span id="144" class="s-bl">etc..</span>)</span>.</span><span
-                    id="p154"> Il faudra donc filtrer les éléments de cette
-                    classe, à l'aide du seul paramètre que les distingue ;</span><span
-                    id="p133"> les <span id="153">properties</span> set.</span></p>
+                <p>Le fait que le standard IFC 4.x ne possède pas de classes
+                  pour les arbres, cette information se trouve dans la
+                  classe&nbsp; générique "IfcGeographicElement", parmis plein
+                  d'autres éléements (les biens-fond, les données RDPPF, etc..).
+                  Il faudra donc filtrer les éléments de cette classe, à l'aide
+                  du seul paramètre que les distingue; les properties set. </p>
                 <p>Pour ce faire, nous allons connecter la sortie du
                   FeatureReader "IfcGeographicElement" à un
                   "GeometryPropertyExtractor"</p>
@@ -270,10 +261,9 @@
                   set n'est pas connue et peut varier d'un objet à l'autre.
                   C'est une notion de FME avancé, que l'on ne va pas aborder
                   dans ce cours. </p>
-                <p><span id="p166">Pour faire apparaître l'attribut que nous
-                    permet de distinguer les arbres des autres éléments, nous
-                    allons<span id="175"> </span>"exposer" l'attribut "Classe"
-                    à l'aide d'un "<span id="174">AttributeExposer</span>".</span></p>
+                <p>Pour faire appraitre l'attribut que nous permet de distinger
+                  les arbres des autres éléments, nous allons&nbsp; "exposer"
+                  l'attribut "Classe" à l'aide d'un "AttributeExposer".</p>
                 <img src="img/bim2gis_17.png" alt=" ">
                 <p>Cet attribut nommé "CLASSE" est celui qui contient la classe
                   d'arbre. Ainsi, si cet attribut est complété, cela signifie
@@ -291,23 +281,22 @@
                   données initiales, dans le "CsmapReprojector". </p>
                 <img src="img/bim2gis_20.png" alt=" ">
                 <p>Les arbres ainsi que les mûrs et les toits sont maintenant
-                  connectés au Writer, vous pouvez relancer la <span id="p186">transformation
-                    </span>complète et charger le fichier zip sur Cesium Ion à
-                  nouveau. </p>
+                  connectés au Writer, vous pouvez relancer la tranformation
+                  complète et charger le fichier zip sur Cesium Ion à nouveau. </p>
                 <p><img src="img/bim2gis_15.png" alt=" "></p>
                 <p><br>
                 </p>
-                <p>Bravo ! Vous avez publié votre modèle BIM en ligne !</p>
+                <p>Bravo ! Vous avez publier votre modèle BIM en ligne !</p>
                 <h3>Bonus </h3>
                 <p>Si vous avez du temps, essayez d' :</p>
                 <ul>
-                  <li>Ajouter d'autres <span id="p223">éléments </span>du
-                    fichier IFC (canalisation, biens-fonds, ...)</li>
+                  <li>Ajouter d'autres éléements du fichier IFC (canalisation,
+                    biens-fonds, ...)</li>
                   <li>Définir des couleurs pour les mûrs</li>
                   <li>Prendre un nouvel extrait sur le site des SITG et effecuer
                     la même opération ailleurs. </li>
-                  <li><span id="p226">D'ajouter des attributs qui pourront être
-                      interrogés dans <span id="233">Cesium</span></span></li>
+                  <li>D'ajouter des attributs qui pouront être intérogé dans
+                    Cesium </li>
                 </ul>
                 <img src="img/bim2gis_21.png" alt=" ">
                 <p>Pour aller plus loin encore, regarder cet <a href="https://sandcastle.cesium.com/?src=3D%20Tiles%20BIM.html"
@@ -317,7 +306,7 @@
                 <h2><br>
                 </h2>
                 <h2>Ancienne version (CAS 2021 avec ESRI). à ne faire que si
-                  vous disposer de ArcGIS Pro, de la motivation et du temps ...</h2>
+                  vous disposer de ArcGIS Pro ...</h2>
                 <h2 id="ressource">Ressource</h2>
                 <p>Worspace&nbsp;: </p>
                 <ul>
