@@ -191,8 +191,6 @@
                   alt=" ">
                 <p style="text-align: right;"><i>source (texte + image) : <a href="https://www.veremes.com/wp-content/uploads/Livre_blanc_etl_spatial.pdf">Veremes
                       </a></i><br> </p>
-                <p><br>
-                </p>
                 <p>Le <b>workspace</b> FME est le code (graphique) qui permet
                   d'effectuer une transformation.&nbsp; Ce code est interprété,
                   puis executé par le <b>FME-Workbench. </b>Le&nbsp; <b>workspace
